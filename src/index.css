@@ -1,3 +1,8 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +10,424 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #6F747D;
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  min-height: 80vh;
+  background-color: #fff;
+}
+
+.footer {
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+  min-height: 50px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+  width: 100vw;
+  background-color: #6F747D;
+}
+
+.header h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.header h1 a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.header nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header nav a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  background-color: #FAFBFE;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 1rem;
+  color: #6F747D;
+  transition: .3s;
+}
+
+.linkOne {
+  border-radius: 5px 5px 0 0;
+}
+
+.linkTwo {
+  border-radius: 0 0 5px 5px;
+}
+
+.header nav a:hover {
+  background-color: #E6E7EF;
+}
+
+.addBook , .searchBook {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #EEECF4;
+  padding: 50px;
+}
+
+.addBook h1 , .searchBook h1{
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.addBook p , .searchBook p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.addBookForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.addBookForm div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.addBookForm div input {
+  width: 250px;
+  margin: 5px;
+  height: 35px;
+  padding: 0 5px;
+  line-height: 35px;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid #FAFBFE;
+  border-radius: 5px;
+}
+
+.submit {
+  padding: 0 5px;
+  height: 35px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #E6E7EF;
+  color: #000;
+  transition: .5s;
+}
+
+.submit:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.listBooks {
+  min-height: 300px;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listBooks h2 {
+  margin: 10px 0 20px 0;
+}
+
+.listBooks p {
+  color: #6F747D;
+}
+
+.book {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 90vw;
+  max-width: 900px;
+}
+
+.book p {
+  width: 45%;
+  color: #000;
+}
+
+.x {
+  width: 30px;
+  margin-left: 5px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.x:hover {
+  cursor: pointer;
+  background-color: #6F747D;
+}
+
+.btnDeleteBooks {
+  margin: 10px 0;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  padding: 5px;
+  width: 150px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.btnDeleteBooks:hover {
+  background-color: #6F747D;
+  cursor: pointer;
+}
+
+.searchBook form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBook form input {
+  width: 67%;
+  height: 35px;
+  background-color: #fff;
+  border: 1px solid #6F747D;
+  border-radius: 5px;
+  padding: 0 5px;
+  color: #000;
+  outline: none;
+  margin-right: 5px;
+  max-width: 400px;
+  min-width: 180px;
+  margin-bottom: 5px;
+}
+
+.btnSearchBook {
+  width: 28%;
+  padding: 0 5px;
+  height: 35px;
+  border: 1px solid #6F747D;
+  border-radius: 5px;
+  background-color: #E6E7EF;
+  color: #000;
+  max-width: 100px;
+  min-width: 80px;
+  transition: .5s;
+  margin-bottom: 5px;
+}
+
+.btnSearchBook:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.resultSearchBooks{
+  padding: 10px 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result {
+  border: 1px solid #6F747D;
+  background-color: #E6E7EF;
+  color: #000;
+  margin: 10px;
+  width: 100%;
+  min-height: 35px;
+  text-align: center;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.resultTitle {
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+}
+
+.infos {
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 10px 5%;
+  max-height: 300px;
+  overflow: scroll;
+}
+
+.infos div {
+  margin-bottom: 10px;
+}
+
+.description{
+  text-align: justify;
+}
+
+.result span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btnInfos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.btnInfos a {
+  display: inline-block;
+  margin-right: 5px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+.btnInfos button {
+  color: #fff;
+  background-color: #000;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 17px;
+  border: none;
+}
+
+.btnInfos a:hover ,
+.btnInfos button:hover {
+  cursor: pointer;
+  background-color: #6F747D;
+}
+
+.loading {
+  height: 50px;
+  width: 50px;
+  border-top: 5px solid #000;
+  border-radius: 50%;
+  animation: loading 1s infinite;
+  margin: 100px;
+}
+
+@keyframes loading {
+  25% {
+    transform: rotate(0.25turn);
+  }
+  50% {
+    transform: rotate(0.5turn);
+  }
+  75% {
+    transform: rotate(0.75turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+  
+}
+
+.errorPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #fff;
+  min-height: 65vh;
+}
+
+.errorPage img {
+  width: 30%;
+  margin: 5%;
+}
+
+.errorPage p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (min-width: 860px) {
+  .header h1 {
+    text-align: left;
+  }
+
+  .header nav {
+    flex-direction: row;
+    height: 40px;
+  }
+
+  .header nav a {
+    line-height: 40px;
+    padding: 0;
+  }
+
+  .linkOne {
+    border-radius: 5px 0 0 5px;
+  }
+
+  .linkTwo {
+    border-radius: 0 5px 5px 0;
+  }
+
+  .addBook h1, .searchBook h1 {
+    font-size: 5rem;
+  }
+
+  .addBookForm {
+    width: 60%;
+  }
+
+  .addBookForm div {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .addBookForm button {
+    width: 30%;
+  }
+  
+  .resultSearchBooks {
+    padding: 10px 10vw;
+  }
 }
