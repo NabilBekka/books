@@ -13,10 +13,9 @@ function App() {
       <Header />
       <Provider store={store}>
         <Routes>
-          <Route path='/' element={<Home />} />
           <Route path='/books' element={<Home />} />
-          <Route path='/search' element={<Search />} />
-          <Route path='*' element={<ErrorPage />} />
+          <Route path='/books/search' element={<Search />} />
+          <Route path='/books/*' element={<ErrorPage />} />
         </Routes>
       </Provider>
       
