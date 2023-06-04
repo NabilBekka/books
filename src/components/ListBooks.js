@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteAllBooks, deleteBook } from "../redux/books/actionBook";
+import { deleteAllBooks, deleteBook } from "../redux/books/bookSlice";
 import FlipMove from 'react-flip-move';
 
 const ListBooks = () => {

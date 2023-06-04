@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { useDispatch } from "react-redux";
-import { addBook } from "../redux/books/actionBook";
+import { addBook } from "../redux/books/bookSlice";
 import { v4 as uuidv4 } from 'uuid';
 
 const AddBook = () => {

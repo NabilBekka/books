@@ -1,13 +1,12 @@
-import { applyMiddleware, combineReducers, createStore } from "redux";
-import bookReducer from "./books/bookReducer";
-import searchBookReducer from "./searchBooks/searchBooksReaducer";
-import thunk from "redux-thunk";
+import {bookReducer} from "./books/bookSlice";
+import {searchBookReducer} from "./searchBooks/searchBooksSlice";
+import { configureStore } from "@reduxjs/toolkit";
 
-const rootReducer = combineReducers({
-    library : bookReducer,
-    googleBooks : searchBookReducer
-});
-
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = configureStore({
+    reducer: {
+        library: bookReducer,
+        googleBooks : searchBookReducer
+    }
+})
 
 export default store;

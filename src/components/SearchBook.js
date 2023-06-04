@@ -1,13 +1,13 @@
 import { useDispatch } from "react-redux";
-import callApi from "../redux/searchBooks/actionSearchBooks";
+import { fetchBooks } from "../redux/searchBooks/searchBooksSlice";
 
 const SearchBook = () => {
     const dispatch = useDispatch();
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(callApi(e.target[0].value));
-        e.target[0].value = ''
+        dispatch(fetchBooks(e.target[0].value));
+        e.target[0].value = '';
     }
 
     return (
